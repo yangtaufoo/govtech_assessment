@@ -3,12 +3,19 @@ const app = express();
 const mysql = require('mysql');
 const fs = require('fs');
 const drinksMenu = "./drinksMenu.json";
+const venues = "./venues.json";
 
 app.get('/drinksMenu', (req, res) => {
     res.send(JSON.parse(fs.readFileSync(drinksMenu)));
 });
 
-app.post('/placeOrder', )
+app.get('/venues', (req, res) => {
+    res.send(JSON.parse(fs.readFileSync(venues)));
+});
+
+app.post('/placeOrder', (req, res) => {
+    console.log("post!");
+});
 
 // const dbConnection = mysql.createConnection({
 //     host: "remotemysql.com:3306",
