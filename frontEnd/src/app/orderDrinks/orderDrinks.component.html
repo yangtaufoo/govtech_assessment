@@ -1,0 +1,30 @@
+<div class="row">
+  <div>
+    <ng-select
+      [items]="drinkList"
+      name="drink"
+      [(ngModel)]="drink">
+    </ng-select>
+  </div>
+  <div class="dropdown col-sm-4">
+      <input type="number" name="number">
+  </div>
+</div>
+
+<div class="row">
+  <div>
+    drink
+  </div>
+</div>
+
+<button>Add items</button>
+
+<div class="dropdown">
+  <ng-select
+  [items]="venueList"
+  name="venue"
+  [(ngModel)]="venue">
+</ng-select>
+</div>
+
+<button>Palce Order</button>
